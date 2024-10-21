@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.justedlev.commons</groupId>
     <artifactId>spring-boot-v3-commons</artifactId>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
     <name>Spring Boot v3 Commons</name>
     <packaging>jar</packaging>
     <description>🗃️ Utils for Spring Boot v3</description>
