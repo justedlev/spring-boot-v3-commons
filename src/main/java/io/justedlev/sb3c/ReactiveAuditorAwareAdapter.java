@@ -1,10 +1,12 @@
 package io.justedlev.sb3c;
 
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.domain.ReactiveAuditorAware;
+import org.springframework.lang.NonNull;
 import reactor.core.publisher.Mono;
+
+import java.util.Optional;
 
 /**
  * An adapter class that bridges the {@link AuditorAware} interface to the {@link ReactiveAuditorAware} interface.
@@ -15,8 +17,9 @@ import reactor.core.publisher.Mono;
  * @see AuditorAware
  * @author Justedlev
  */
-@RequiredArgsConstructor(staticName = "of", onConstructor_ = {@NonNull})
+@RequiredArgsConstructor(staticName = "of")
 public final class ReactiveAuditorAwareAdapter<T> implements ReactiveAuditorAware<T> {
+    @NonNull
     private final AuditorAware<T> other;
 
     /**
@@ -26,6 +29,7 @@ public final class ReactiveAuditorAwareAdapter<T> implements ReactiveAuditorAwar
      * @return a {@link Mono} containing the current auditor, or empty if not present.
      * @see ReactiveAuditorAware#getCurrentAuditor()
      * @see AuditorAware#getCurrentAuditor()
+     * @see Mono#justOrEmpty(Optional)
      */
     @NonNull
     @Override
