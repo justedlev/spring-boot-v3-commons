@@ -1,9 +1,11 @@
 package io.justedlev.sb3c;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.Accessors;
 import lombok.experimental.SuperBuilder;
 import org.springframework.data.annotation.CreatedBy;
@@ -12,12 +14,11 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * An abstract class that represents an auditable entity. This class extends the {@link AbstractPersistable}
+ * An abstract class that represents an auditable entity. This class extends the {@link DefaultPersistable}
  * class and includes auditing fields such as the user who created and last modified the entity, along with
  * the timestamps for these actions.
  *
@@ -34,10 +35,7 @@ import java.sql.Timestamp;
 @Accessors(chain = true, fluent = true)
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class Auditable<K extends Serializable> extends AbstractPersistable<K> implements Serializable {
-
-    @Serial
-    private static final long serialVersionUID = 202409011946L;
+public abstract class DefaultAuditable<K extends Serializable> extends DefaultPersistable<K> {
 
     /**
      * The user who created the entity.
