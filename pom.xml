@@ -51,7 +51,7 @@
         <jakarta.persistence.version>3.2.0</jakarta.persistence.version>
         <hibernate.version>6.5.2.Final</hibernate.version>
         <spring.data.commons.version>3.3.3</spring.data.commons.version>
-        <projectreactor.core.version>3.6.9</projectreactor.core.version>
+        <projectreactor.core.version>3.7.0</projectreactor.core.version>
         <spring.data.jpa.version>3.3.3</spring.data.jpa.version>
     </properties>
     <dependencyManagement>
