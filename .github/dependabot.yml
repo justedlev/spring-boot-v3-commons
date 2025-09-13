@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "maven"
-    target-branch: "dev"
+    target-branch: "develop"
     directory: "/"
     reviewers:
       - "justedlev"
@@ -11,7 +11,7 @@ updates:
       interval: "weekly"
 
   - package-ecosystem: "github-actions"
-    target-branch: "dev"
+    target-branch: "develop"
     directory: "/"
     reviewers:
       - "justedlev"
