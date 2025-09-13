@@ -1,3 +1,5 @@
+## [DEPRECATED] Please use [spring-sprinkle](https://github.com/justedlev/spring-sprinkle)
+
 <div id="header" align="center">
     <h1>Spring Boot v3 Commons</h1>
     <h3>🗃️ Utilities for Spring Boot v3</h3>
